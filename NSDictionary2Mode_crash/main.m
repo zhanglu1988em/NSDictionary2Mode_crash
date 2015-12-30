@@ -7,11 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Person.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"zhangsan",@"name",@"hangzhou",@"address",[NSNumber numberWithInt:10],@"age" ,@"男",@"sex",nil];
+        
+        Person *person = [[Person alloc] initWithDict:dict];
+        NSLog(@"%@",person);
+        
+        
+        
     }
     return 0;
 }
